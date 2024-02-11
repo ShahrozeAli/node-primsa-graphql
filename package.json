@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/app.ts",
     "dev": "cross-env NODE_ENV=development ts-node server/app.ts",
@@ -14,17 +17,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^5.9.1",
     "@types/express": "^4.17.21",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
-    "apollo": "^2.34.0",
-    "docker": "^1.0.0",
+    "apollo": "^2.11.1",
+    "apollo-server-express": "^3.13.0",
+    "docker": "^0.2.14",
     "dotenv": "^16.4.2",
-    "eslint": "^8.56.0",
     "express": "^4.18.2",
     "graphql": "^15.8.0",
+    "graphql-import": "^0.7.1",
     "graphql-language-service": "^5.2.0",
-    "prettier": "^3.2.5",
     "prisma": "^5.9.1"
   },
   "devDependencies": {
@@ -34,7 +38,11 @@
     "@types/node": "^20.11.17",
     "babel-loader": "^9.1.3",
     "cross-env": "^7.0.3",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
     "nodemon": "^3.0.3",
+    "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }
