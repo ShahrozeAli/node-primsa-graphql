@@ -1,0 +1,171 @@
+# Node.js
+node_modules/
+
+# Prisma
+prisma/
+
+# GraphQL
+*.graphql
+*.gql
+
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+pnp-node/
+bower_components/
+
+# Output directories
+dist/
+build/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# Compiled binary addons
+node_modules/
+*.node
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains
+.idea/
+*.iml
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Node package manager
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp/
+.pnp.js
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional ESLint cache
+.eslintcache
+
+# TSLint
+tslint-report*
+
+# Auth0
+auth0-variables.env
+
+# Local environment variables
+.env.local
+
+# Storybook
+.storybook-out/
+.storybook-static/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode-test/
+.history/
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Zeit Now
+.now/
+
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunt/
+
+# Folders
+__pycache__/
+.cache/
+.cypress/
+
+# Compiled Python files
+*.pyc
+
+# Compiled Java classes
+*.class
+
+# Compiled Ruby files
+*.rbc/
+
+# Compiled Kotlin files
+*.kotlin_module
+
+# Compiled TypeScript files
+*.tsbuildinfo
+
+# Compiled JavaScript files
+*.js
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Visual Studio Code directories
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
