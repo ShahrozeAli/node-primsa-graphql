@@ -8,10 +8,10 @@
     "lint:fix": "eslint --fix .",
     "format": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/app.ts",
-    "dev": "cross-env NODE_ENV=development ts-node server/app.ts",
+    "start": "node src/app.ts",
+    "dev": "cross-env NODE_ENV=development ts-node src/app.ts",
     "build": "tsc",
-    "prod": "cross-env NODE_ENV=production node dist/server.js",
+    "prod": "cross-env NODE_ENV=production node dist/src/app.ts",
     "devStart": "nodemon --exec 'node test_prisma.mjs'"
   },
   "keywords": [],
@@ -23,6 +23,7 @@
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "apollo": "^2.11.1",
+    "apollo-server": "^3.13.0",
     "apollo-server-express": "^3.13.0",
     "docker": "^0.2.14",
     "dotenv": "^16.4.2",
@@ -30,6 +31,7 @@
     "graphql": "^15.8.0",
     "graphql-import": "^0.7.1",
     "graphql-language-service": "^5.2.0",
+    "graphql-tools": "^9.0.0",
     "prisma": "^5.9.1"
   },
   "devDependencies": {

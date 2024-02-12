@@ -8,7 +8,14 @@
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
     "outDir": "dist",
-    "lib": ["esnext"]
+    "lib": ["esnext"],
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["node_modules/*", "src/types/*"]
+    }
   },
-  "include": ["server/**/*.ts", "test_prisma.ts"]
+  "include": ["src/**/*.ts", "test_prisma.mjs", "src/**/*.graphql"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }
