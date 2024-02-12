@@ -10,5 +10,5 @@
     "outDir": "dist",
     "lib": ["esnext"]
   },
-  "include": ["server/**/*.ts"]
+  "include": ["server/**/*.ts", "test_prisma.ts"]
 }

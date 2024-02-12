@@ -11,7 +11,8 @@
     "start": "node server/app.ts",
     "dev": "cross-env NODE_ENV=development ts-node server/app.ts",
     "build": "tsc",
-    "prod": "cross-env NODE_ENV=production node dist/server.js"
+    "prod": "cross-env NODE_ENV=production node dist/server.js",
+    "devStart": "nodemon --exec 'node test_prisma.mjs'"
   },
   "keywords": [],
   "author": "",
