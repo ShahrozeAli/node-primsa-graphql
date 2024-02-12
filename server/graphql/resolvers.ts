@@ -10,7 +10,7 @@ const resolvers = {
   Query: {
     getSession: async (
       _: any,
-      { sessionId }: { sessionId: string },
+      { sessionId }: { sessionId: number },
       { prisma }: Context,
     ) => {
       return prisma.session.findUnique({
@@ -21,7 +21,7 @@ const resolvers = {
     },
     getUserSessions: async (
       _: any,
-      { userId }: { userId: string },
+      { userId }: { userId: number },
       { prisma }: Context,
     ) => {
       return prisma.session.findMany({
@@ -50,7 +50,7 @@ const resolvers = {
         id,
         name,
         description,
-      }: { id: string; name: string; description?: string },
+      }: { id: number; name: string; description?: string },
       { prisma }: Context,
     ) => {
       return prisma.role.update({
@@ -63,7 +63,7 @@ const resolvers = {
         },
       });
     },
-    deleteRole: async (_: any, { id }: { id: string }, { prisma }: Context) => {
+    deleteRole: async (_: any, { id }: { id: number }, { prisma }: Context) => {
       return prisma.role.delete({
         where: {
           id,
@@ -72,7 +72,7 @@ const resolvers = {
     },
     editUser: async (
       _: any,
-      { id, username, email }: { id: string; username: string; email: string },
+      { id, username, email }: { id: number; username: string; email: string },
       { prisma }: Context,
     ) => {
       return prisma.user.update({
@@ -91,7 +91,7 @@ const resolvers = {
         userId,
         startTime,
         endTime,
-      }: { userId: string; startTime: string; endTime?: string },
+      }: { userId: number; startTime: string; endTime?: string },
       { prisma }: Context,
     ) => {
       return prisma.session.create({
@@ -104,7 +104,7 @@ const resolvers = {
     },
     deleteSession: async (
       _: any,
-      { sessionId }: { sessionId: string },
+      { sessionId }: { sessionId: number },
       { prisma }: Context,
     ) => {
       return prisma.session.delete({
@@ -115,7 +115,7 @@ const resolvers = {
     },
     getSessionDataWithoutUser: async (
       _: any,
-      { sessionId }: { sessionId: string },
+      { sessionId }: { sessionId: number },
       { prisma }: Context,
     ) => {
       return prisma.session.findUnique({
@@ -126,7 +126,7 @@ const resolvers = {
     },
     getSessionDataWithUserAndRoles: async (
       _: any,
-      { sessionId }: { sessionId: string },
+      { sessionId }: { sessionId: number },
       { prisma }: Context,
     ) => {
       try {
