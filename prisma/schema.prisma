@@ -1,0 +1,24 @@
+// schema.prisma
+
+model Role {
+  id          Int     @id @default(autoincrement())
+  name        String
+  description String?
+  users       User[]  @relation("UserRoles")
+}
+
+model User {
+  id       Int       @id @default(autoincrement())
+  username String
+  email    String    @unique
+  roles    Role[]    @relation("UserRoles")
+  sessions Session[]
+}
+
+model Session {
+  id        Int       @id @default(autoincrement())
+  userId    Int
+  user      User      @relation(fields: [userId], references: [id])
+  startTime DateTime
+  endTime   DateTime?
+}
