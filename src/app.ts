@@ -5,7 +5,7 @@ import { ApolloServer, gql } from "apollo-server";
 import fs from "fs";
 
 // Read the GraphQL schema file
-const typeDefs = fs.readFileSync("./graphql/schema.graphql", "utf-8");
+const typeDefs = fs.readFileSync("src/graphql/schema.graphql", "utf-8");
 
 // Import resolvers
 const resolvers = require("./graphql/resolvers");

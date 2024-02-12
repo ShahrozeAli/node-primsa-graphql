@@ -2,28 +2,16 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-interface Context {
-  prisma: PrismaClient;
-}
-
 const resolvers = {
   Query: {
-    getSession: async (
-      _: any,
-      { sessionId }: { sessionId: number },
-      { prisma }: Context,
-    ) => {
+    getSession: async (_: any, { sessionId }: { sessionId: number }) => {
       return prisma.session.findUnique({
         where: {
           id: sessionId,
         },
       });
     },
-    getUserSessions: async (
-      _: any,
-      { userId }: { userId: number },
-      { prisma }: Context,
-    ) => {
+    getUserSessions: async (_: any, { userId }: { userId: number }) => {
       return prisma.session.findMany({
         where: {
           userId: userId,
@@ -35,7 +23,6 @@ const resolvers = {
     createRole: async (
       _: any,
       { name, description }: { name: string; description?: string },
-      { prisma }: Context,
     ) => {
       return prisma.role.create({
         data: {
@@ -51,7 +38,6 @@ const resolvers = {
         name,
         description,
       }: { id: number; name: string; description?: string },
-      { prisma }: Context,
     ) => {
       return prisma.role.update({
         where: {
@@ -63,7 +49,7 @@ const resolvers = {
         },
       });
     },
-    deleteRole: async (_: any, { id }: { id: number }, { prisma }: Context) => {
+    deleteRole: async (_: any, { id }: { id: number }) => {
       return prisma.role.delete({
         where: {
           id,
@@ -73,7 +59,6 @@ const resolvers = {
     editUser: async (
       _: any,
       { id, username, email }: { id: number; username: string; email: string },
-      { prisma }: Context,
     ) => {
       return prisma.user.update({
         where: {
@@ -92,7 +77,6 @@ const resolvers = {
         startTime,
         endTime,
       }: { userId: number; startTime: string; endTime?: string },
-      { prisma }: Context,
     ) => {
       return prisma.session.create({
         data: {
@@ -102,11 +86,7 @@ const resolvers = {
         },
       });
     },
-    deleteSession: async (
-      _: any,
-      { sessionId }: { sessionId: number },
-      { prisma }: Context,
-    ) => {
+    deleteSession: async (_: any, { sessionId }: { sessionId: number }) => {
       return prisma.session.delete({
         where: {
           id: sessionId,
@@ -116,7 +96,6 @@ const resolvers = {
     getSessionDataWithoutUser: async (
       _: any,
       { sessionId }: { sessionId: number },
-      { prisma }: Context,
     ) => {
       return prisma.session.findUnique({
         where: {
@@ -127,7 +106,6 @@ const resolvers = {
     getSessionDataWithUserAndRoles: async (
       _: any,
       { sessionId }: { sessionId: number },
-      { prisma }: Context,
     ) => {
       try {
         // Fetch session data including user and roles

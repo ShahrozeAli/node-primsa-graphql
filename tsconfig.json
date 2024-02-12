@@ -13,7 +13,7 @@
     "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {
-      "*": ["node_modules/*", "src/types/*"]
+      "*": ["node_modules/*", "src/graphql/*"]
     }
   },
   "include": ["src/**/*.ts", "test_prisma.mjs", "src/**/*.graphql"],
